@@ -1,0 +1,28 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "lib": ["es6"],
+    "noEmit": true,
+    "incremental": true
+    // "rootDirs": [
+    //   "./app/",
+    //   "./config/"
+    // ],
+  },
+  "files": ["./src/main.ts"],
+  "exclude": [
+    "src/client",
+    "node_modules",
+    "target",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "__tests__",
+    "src/setupTests.ts",
+    "jest.config.js"
+  ]
+  
+}
