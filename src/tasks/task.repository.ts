@@ -28,10 +28,7 @@ export class TaskRepository extends Repository<Task> {
       const tasks = await query.getMany()
       return tasks
     } catch (error) {
-      this.logger.error(
-        `Could not retrieve tasks. DTO: ${JSON.stringify(filterDto)}`,
-        error.stack
-      )
+      this.logger.error(`Could not retrieve tasks. DTO: ${JSON.stringify(filterDto)}`, error.stack)
       throw error
     }
   }
